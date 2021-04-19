@@ -154,14 +154,10 @@ document.querySelector("#sub-btn").onclick = function () {
   sendTransaction(false);
 };
 
+// Deletes all entries in the table and refreshes app
 document.querySelector("#del-btn").onclick = () => {
   fetch("/api/transaction", {
     method: "DELETE"
-    // body: JSON.stringify(transaction),
-    // headers: {
-    //   Accept: "application/json, text/plain, */*",
-    //   "Content-Type": "application/json"
-    // }
   })
     .then(response => {
       return response.json();

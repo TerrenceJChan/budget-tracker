@@ -31,7 +31,7 @@ router.get("/api/transaction", (req, res) => {
     });
 });
 
-
+// Deletes single transaction record
 router.delete("/api/transaction/:_id", ({ params }, res) => {
   Transaction.findOneAndDelete(params._id)
     .then(dbTransaction => {
@@ -42,6 +42,7 @@ router.delete("/api/transaction/:_id", ({ params }, res) => {
     });
 });
 
+// Deletes all transaction records
 router.delete("/api/transaction", ({ body }, res) => {
   Transaction.deleteMany(body)
     .then(dbTransaction => {

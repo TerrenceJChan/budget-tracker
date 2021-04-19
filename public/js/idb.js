@@ -1,11 +1,13 @@
 let db;
 const request = indexedDB.open('tracker', 1);
 
+// Creates "new_transaction" table
 request.onupgradeneeded = (event) => {
     const db = event.target.result;
     db.createObjectStore('new_transaction', { autoIncrement: true });
 }
 
+// Uploads data on valid entry
 request.onsuccess = (event) => {
     db = event.target.result;
 
@@ -57,6 +59,7 @@ const uploadData = () => {
     }
 }
 
+// Listens for an online connection. Uploads data if there is a stable connection
 window.addEventListener('online', () => {
     console.log('Connection re-established. Syncing items.')
     uploadData();
