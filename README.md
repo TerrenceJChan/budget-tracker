@@ -11,7 +11,7 @@ Track your income and expenses with this PWA that can be taken on the go, with o
 * [Developer](#developer)
 
 ## Usage
-The deployed application can be found here: https://dashboard.heroku.com/apps/ancient-ravine-50926  
+The deployed application can be found here: https://ancient-ravine-50926.herokuapp.com/ 
   
 Enter your income and expenses and the app will accordingly tally your total and display them in a neatly animated graph.  
 
